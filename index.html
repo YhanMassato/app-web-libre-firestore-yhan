@@ -9,7 +9,7 @@
     </head>
 
     <body>
-        <h1>INSANO H1 EU ODEIO TODOS OS NODESSCRIPTS</h1>
+        <h1>Meu projeto está rodando mais que carro de marido infiel</h1>
 
     <div class="content">
             <form id="add-book-form">
@@ -22,9 +22,10 @@
         </div>
     </body>
 
+    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+
     <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
 
     <script>
         const firebaseConfig = {
@@ -35,9 +36,17 @@
             messagingSenderId: "599683780859",
             appId: "1:599683780859:web:70bf0b6d06cc18ee83a05e",
             measurementId: "G-H051570DN3"
-        };
+          };         
+
+        firebase.initializeApp(firebaseConfig);
+
+        const db = firebase.firestore(); 
+        
+        //console.log(db) 
+
+
     </script>
 
-    <script href="./app.js"></script>
+    <script src="./app.js"></script>
 
 </html>
