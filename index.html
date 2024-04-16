@@ -13,12 +13,14 @@
 
     <div class="content">
             <form id="add-book-form">
-            
+
+                <input type="text" name="titulo" id="titulo" placeholder="Digite o Titulo do livro">
+                <input type="text" name="autor" id="autor" placeholder="Digite o nome do autor">
+                <button>CADASTRAR</button>
+
             </form>
 
-            <ul id="book-list">
-
-            </ul>
+            <ul id="book-list"></ul>
         </div>
     </body>
 
@@ -36,7 +38,7 @@
             messagingSenderId: "599683780859",
             appId: "1:599683780859:web:70bf0b6d06cc18ee83a05e",
             measurementId: "G-H051570DN3"
-          };         
+        };         
 
         firebase.initializeApp(firebaseConfig);
 
