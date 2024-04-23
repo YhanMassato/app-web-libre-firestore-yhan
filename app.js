@@ -6,6 +6,9 @@ function renderBook(doc){
     let list    = document.createElement("li");
     let titulo  = document.createElement("span")
     let autor   = document.createElement("span")
+    let excluir = document.createElement("div")
+
+    excluir.textContent = 'X'
 
     list.setAttribute('data-id', doc.id)
     titulo.textContent = doc.data().titulo
@@ -13,6 +16,19 @@ function renderBook(doc){
     
     list.appendChild(titulo)
     list.appendChild(autor)
+    list.appendChild(excluir)
+
+    excluir.addEventListener('click', (event) => {
+        event.stopPropagation()
+
+        let id = event.target.parentElement.getAttribute('data-id')
+        // alert(id)
+        db.collection('libre-firestore').doc(id).delete()
+        .then(()=>{window.location.reload()})
+        
+        
+        
+})
 
     livroList.appendChild(list)
 }
